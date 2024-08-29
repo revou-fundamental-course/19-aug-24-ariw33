@@ -4,9 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <header>
+        <div class="logo-icon"></div>
+        <nav class="nav-container">
+            <a href="#home" id="menu-home" class="nav-menu">Home</a>
+            <a href="#our-profile" id="menu-profile" class="nav-menu">Our Profile</a>
+            <a href="#achievement" id="menu-achievement" class="nav-menu">Achievement</a>
+            <a href="#message-us" id="menu-message" class="nav-menu">Message Us</a>
+        </nav>
+    </header>
+
+    <hr>
+
+    <article id="home">
+        <div>
+            <h1>Hai <span id="name"></span>, Welcome To Website</h1>
+            <p>ini adalah website latihan pertama</p>
+        </div>
+        <div class="banner-img"></div>
+    </article>
+
+    <hr>
+
+    <main>
+        <section id="our-profile">
+            <h1>Our Profile</h1>
+        </section>
+
+        <section class="profile-container">
+            <div class="profile-item">
+                <div class="profile-img"></div>
+                <h2>Professional Teacher</h2>
+            </div>
+            <div class="profile-item">
+                <div class="profile-img"></div>
+                <h2>Sport Field</h2>
+            </div>
+            <div class="profile-item">
+                <div class="profile-img"></div>
+                <h2>Classroom</h2>
+            </div>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <section id="message-us">
+            <h1>Message Us</h1>
+        </section>
+
+        <div class="message-container">
+            <div class="input-container">               
+                <form id="messageForm">
+                    <div class="form-group">
+                        <label for="nama">Nama</label>
+                        <h4>:</h4>
+                        <input type="text" id="nama" name="nama" placeholder="Nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal-lahir">Tanggal Lahir</label>
+                        <h4>:</h4>
+                        <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin</label>
+                        <h4>:</h4>
+                        <input type="radio" id="laki-laki" name="jenis-kelamin" value="Laki-Laki">
+                        <label for="laki-laki">Laki-Laki</label>
+                        <input type="radio" id="perempuan" name="jenis-kelamin" value="Perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan</label>
+                        <h4>:</h4>
+                        <textarea id="pesan" name="pesan" rows="4" placeholder="Pesan"></textarea>
+                    </div>
+                    <div class="form-group submit">         
+                        <button type="button" onclick="addData()">Submit</button>
+                    </div>
+                </form>
+            </div>
+            
+            <table class="table-container" id="dataTable">
+                <thead>
+                    <tr>
+                        <th>Nama</th>
+                        <th>Tanggal Lahir</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Pesan</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Baris tabel diisi oleh JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        <P id="created">Created By Ari</P>
+    </footer>
     
+    <script src="js/script.js"></script>
 </body>
 </html>
